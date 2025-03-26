@@ -1,0 +1,26 @@
+caption {
+    display: inline;
+}
+
+.gradient-bg1 {
+    background: linear-gradient(135deg, #76f21d, #05b50e);
+    /* Example gradient */
+    color: white;
+    /* Ensures text is readable */
+}
+
+
+.gradient-bg2 {
+    background: linear-gradient(135deg, #e55b0b, #c44403);
+    /* Example gradient */
+    color: white;
+    /* Ensures text is readable */
+}
+
+
+.gradient-bg3 {
+    background: linear-gradient(135deg, #2f96f7, #1d03b1);
+    /* Example gradient */
+    color: white;
+    /* Ensures text is readable */
+}

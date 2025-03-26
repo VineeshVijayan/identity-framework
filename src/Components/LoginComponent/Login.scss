@@ -1,0 +1,130 @@
+// Reset styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Full-screen background
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    //background: url('../Asset/BG3.jpg') no-repeat center;
+    background-color: rgba(245, 247, 249, 255);
+    background-size: cover;
+}
+
+// Wrapper for form
+.wrapper {
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1)); // Remove transparency
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin: auto;
+}
+
+// Login title
+h1 {
+    font-size: 36px;
+    color: #0b0000;
+    margin-bottom: 20px;
+}
+
+// Input fields with icons
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(12, 11, 11, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #070505;
+    padding: 15px 45px 15px 20px;
+}
+
+.input-box input::placeholder {
+    color: #0a0101;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #090000;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -10px 0 15px;
+    color: #090101;
+}
+
+.remember-forgot a {
+    color: #050000;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+// Login button
+.login-btn {
+    width: 100%;
+    height: 45px;
+    background: #1877F2;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 10px rgba(228, 227, 227, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #0c0101;
+    font-weight: 700;
+}
+
+// Register link
+.register-link {
+    font-size: 14.5px;
+    margin-top: 20px;
+    color: #0c0202;
+}
+
+.register-link a {
+    color: #0a0202;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+// Add styles for the identity icon
+.login-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; // Space below the icon
+}
+
+.login-icon img {
+    width: 80px; // Adjust size
+    height: 100px;
+}
