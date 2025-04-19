@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from '../NavbarComponent/Navbar'; // Adjust the path as needed
-import Sidebar from '../SidebarComponents/Sidebar'; // Adjust the path as needed
-import './TerminateAccessComponent.scss';
+import Navbar from '../../NavbarComponent/Navbar'; // Adjust the path as needed
+import Sidebar from '../../SidebarComponents/Sidebar'; // Adjust the path as needed
+import './RequestAppComponent.scss';
 
-function TerminateAccessComponent() {
+function RequestAppComponent() {
     return (
         <div className="d-flex" margin="auto">
             <Sidebar />
@@ -28,7 +28,7 @@ function TerminateAccessComponent() {
 
                 <div className="container mt-4">
                     <div className="card p-3 mb-3 shadow-sm">
-                        <h2>Terminate Account</h2>
+                        <h4>Request Application User</h4>
 
                         <h4>User Details</h4>
                         <div className="row">
@@ -53,10 +53,30 @@ function TerminateAccessComponent() {
                                 <label>Date of Birth</label>
                                 <input type="date" className="form-control" />
                             </div>
+                        </div>
+                    </div>
 
-                            <div className="button-container mt-3">
-                                <button type="button" className="btn btn-success">Submit</button>
-                            </div>
+                    {/* Second Section: Permissions */}
+                    <div className="card p-3 shadow-sm">
+                        <h4>Application(s) being requested</h4>
+                        {/* Search Form */}
+                        <form role="search" className="d-flex align-items-center">
+
+                            <input
+                                className="form-control"
+                                type="search"
+                                placeholder="Search"
+                                aria-label="Search"
+                                style={{ width: "300px" }}
+                            />
+                            <div className='search-btn'><button className="btn btn-outline-success me-3" type="submit">Search</button></div>
+
+                        </form>
+
+                        <textarea className="form-control mt-3" rows="5" placeholder="Enter details here..."></textarea>
+
+                        <div className="button-container mt-3">
+                            <button type="button" className="btn btn-success">Submit</button>
                         </div>
                     </div>
 
@@ -66,11 +86,4 @@ function TerminateAccessComponent() {
     );
 }
 
-export default TerminateAccessComponent
-
-
-
-
-
-
-
+export default RequestAppComponent

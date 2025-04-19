@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from '../NavbarComponent/Navbar'; // Adjust the path as needed
-import Sidebar from '../SidebarComponents/Sidebar'; // Adjust the path as needed
-import './UserComponent.scss';
+import Navbar from '../../NavbarComponent/Navbar'; // Adjust the path as needed
+import Sidebar from '../../SidebarComponents/Sidebar'; // Adjust the path as needed
+import './RemoveAppComponent.scss';
 
-function UserComponent() {
+function RemoveAppComponent() {
     return (
         <div className="d-flex" margin="auto">
             <Sidebar />
@@ -28,7 +28,7 @@ function UserComponent() {
 
                 <div className="container mt-4">
                     <div className="card p-3 mb-3 shadow-sm">
-                        <h2>Create New  User</h2>
+                        <h4>Remove Application User</h4>
 
                         <h4>User Details</h4>
                         <div className="row">
@@ -58,7 +58,7 @@ function UserComponent() {
 
                     {/* Second Section: Permissions */}
                     <div className="card p-3 shadow-sm">
-                        <h4>Permissions</h4>
+                        <h4>Application(s) being requested</h4>
                         {/* Search Form */}
                         <form role="search" className="d-flex align-items-center">
 
@@ -72,6 +72,10 @@ function UserComponent() {
                             <div className='search-btn'><button className="btn btn-outline-success me-3" type="submit">Search</button></div>
 
                         </form>
+
+                        {/* Large Text Area */}
+                        <textarea className="form-control mt-3" rows="5" placeholder="Enter details here..."></textarea>
+
                         {/* Submit Button */}
                         <div className="button-container mt-3">
                             <button type="button" className="btn btn-success">Submit</button>
@@ -84,5 +88,9 @@ function UserComponent() {
     );
 }
 
-export default UserComponent;
+export default RemoveAppComponent
+
+
+
+
 

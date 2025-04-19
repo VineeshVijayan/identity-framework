@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from '../NavbarComponent/Navbar'; // Adjust the path as needed
-import Sidebar from '../SidebarComponents/Sidebar'; // Adjust the path as needed
-import './RequestAppComponent.scss';
+import Navbar from '../../NavbarComponent/Navbar';
+import Sidebar from '../../SidebarComponents/Sidebar';
+import './UserComponent.scss';
 
-function RequestAppComponent() {
+function UserComponent() {
     return (
         <div className="d-flex" margin="auto">
             <Sidebar />
@@ -28,7 +28,7 @@ function RequestAppComponent() {
 
                 <div className="container mt-4">
                     <div className="card p-3 mb-3 shadow-sm">
-                        <h2>Request Application User</h2>
+                        <h2>Create New  User</h2>
 
                         <h4>User Details</h4>
                         <div className="row">
@@ -58,7 +58,7 @@ function RequestAppComponent() {
 
                     {/* Second Section: Permissions */}
                     <div className="card p-3 shadow-sm">
-                        <h4>Application(s) being requested</h4>
+                        <h4>Permissions</h4>
                         {/* Search Form */}
                         <form role="search" className="d-flex align-items-center">
 
@@ -72,10 +72,6 @@ function RequestAppComponent() {
                             <div className='search-btn'><button className="btn btn-outline-success me-3" type="submit">Search</button></div>
 
                         </form>
-
-                        {/* Large Text Area */}
-                        <textarea className="form-control mt-3" rows="5" placeholder="Enter details here..."></textarea>
-
                         {/* Submit Button */}
                         <div className="button-container mt-3">
                             <button type="button" className="btn btn-success">Submit</button>
@@ -88,4 +84,5 @@ function RequestAppComponent() {
     );
 }
 
-export default RequestAppComponent
+export default UserComponent;
+

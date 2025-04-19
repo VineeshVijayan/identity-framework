@@ -25,17 +25,23 @@ function HomeComponent() {
                     </div>
 
                     <div className='col-md-4 p-1'>
-                        <div className='p-3 gradient-bg2 shadow-sm d-flex justify-content-around align-items-center rounded'>
-                            <div>
-                                <h3 className='fs-3'>My Request</h3>
+                        <div
+                            className='p-3 gradient-bg2 shadow-sm d-flex justify-content-around align-items-center rounded'
+                            style={{ cursor: 'pointer' }}
+                            onClick={() => navigate('/myrequest')} // Correct usage
+                        >                            <div>
+                                <h3 className='fs-3'>My Requests</h3>
                             </div>
                             <i className='bi bi-app-indicator p-3 fs-1'></i>
                         </div>
                     </div>
 
                     <div className='col-md-4 p-1'>
-                        <div className='p-3 gradient-bg3 shadow-sm d-flex justify-content-around align-items-center rounded'>
-                            <div>
+                        <div
+                            className='p-3 gradient-bg3 shadow-sm d-flex justify-content-around align-items-center rounded'
+                            style={{ cursor: 'pointer' }}
+                            onClick={() => navigate('/myapproval')} // Correct usage
+                        >                             <div>
                                 <h3 className='fs-3'>My Approvals</h3>
                             </div>
                             <i className='bi bi-hand-thumbs-up p-3 fs-1'></i>

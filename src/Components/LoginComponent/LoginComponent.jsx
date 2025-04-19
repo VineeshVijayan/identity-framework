@@ -18,7 +18,7 @@ const LoginComponent = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         if (email === correctEmail && password === correctPassword) {
-            navigate("/dashboard"); // Redirect to Dashboard
+            navigate("/dashboard");
         } else {
             setError("Invalid username or password!");
         }
@@ -71,10 +71,6 @@ const LoginComponent = () => {
                 </div>
 
                 <Button type="submit" className="login-btn">Login</Button>
-
-                <div className="register-link">
-                    <p>Don't have an account? <a href="#">Register</a></p>
-                </div>
             </Form>
         </div>
     );

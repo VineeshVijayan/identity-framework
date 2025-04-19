@@ -94,8 +94,16 @@ function Sidebar() {
 
                     {openMenus["roleBased"] && (
                         <div style={{ paddingLeft: "30px" }}>
-                            <a className="list-group-item py-1 border-0" href="#">Create New Role</a>
-                            <a className="list-group-item py-1 border-0" href="#">Manage Existing Role</a>
+                            <a className="list-group-item py-1 border-0"
+                                onClick={() => navigate('/newrole')}
+                                style={{ cursor: "pointer" }}>Create New Role</a>
+
+
+
+
+                            <a className="list-group-item py-1 border-0"
+                                onClick={() => navigate('/managerole')}
+                                style={{ cursor: "pointer" }}>Manage Existing Role</a>
                         </div>
                     )}
                 </div>
@@ -116,10 +124,23 @@ function Sidebar() {
 
                     {openMenus["idfAdmin"] && (
                         <div style={{ paddingLeft: "30px" }}>
-                            <a className="list-group-item py-1 border-0" href="#">User Administration</a>
+                            <a className="list-group-item py-1 border-0"
+                                onClick={() => navigate('/useradministration')}
+                                style={{ cursor: "pointer" }}>User Administration</a>
+
+
+
                             <a className="list-group-item py-1 border-0" href="#">Permission</a>
-                            <a className="list-group-item py-1 border-0" href="#">Manage Auth Sources</a>
-                            <a className="list-group-item py-1 border-0" href="#">Manage Outbound Connectors</a>
+                            <a className="list-group-item py-1 border-0"
+                                onClick={() => navigate('/manageauthoritative')}
+                                style={{ cursor: "pointer" }}>Manage Auth Sources</a>
+
+
+                            <a className="list-group-item py-1 border-0"
+                                onClick={() => navigate('/manageoutbound')}
+                                style={{ cursor: "pointer" }}>Manage Outbound Connectors</a>
+
+
                             <a className="list-group-item py-1 border-0" href="#">IDF Settings</a>
                         </div>
                     )}
@@ -189,8 +210,7 @@ function Sidebar() {
                     )}
                 </div>
 
-
-                <a className="list-group-item py-2">
+                <a className="list-group-item py-2" style={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
                     <i className="bi bi-power fs-4 me-3"></i>
                     <span className="fs-6">Logout</span>
                 </a>

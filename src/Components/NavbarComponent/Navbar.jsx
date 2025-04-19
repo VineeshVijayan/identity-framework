@@ -26,7 +26,7 @@ function Navbar() {
                         <li className="nav-item3">
                             <button className="btn btn-secondary nav-btn3" onClick={() => navigate('/myapproval')} title="My Approvals"> <i className='bi bi-hand-thumbs-up'></i></button>
                         </li>
-                        <li className="nav-item dropdown1">
+                        <li className="nav-item dropdown" title="My Profile">
                             <a
                                 className="nav-link dropdown-toggle d-flex align-items-center hidden-arrow"
                                 href="#"
@@ -42,11 +42,23 @@ function Navbar() {
                                     loading="lazy"
                                 />
                             </a>
+
+
                             <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
-                                <li><a className="dropdown-item" href="#">My Profile</a></li>
-                                <li><a className="dropdown-item" href="#">Settings</a></li>
-                                <li><a className="dropdown-item" href="#">Logout</a></li>
+                                <li>
+                                    <a className="dropdown-item" style={{ cursor: "pointer" }} onClick={() => navigate('/userprofile')}>
+                                        My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="dropdown-item" href="#">Settings</a>
+                                </li>
+                                <li>
+                                    <a className="dropdown-item" style={{ cursor: "pointer" }} onClick={() => navigate('/')}>Logout</a>
+                                </li>
                             </ul>
+
+
                         </li>
                     </ul>
                 </div>
