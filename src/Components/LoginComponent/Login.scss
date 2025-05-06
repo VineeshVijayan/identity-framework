@@ -26,6 +26,7 @@ body {
     text-align: center;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
+    position: relative;
 }
 
 // Login title
@@ -127,4 +128,12 @@ h1 {
 .login-icon img {
     width: 80px; // Adjust size
     height: 100px;
+}
+
+.powered-by {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 0.75rem;
+    color: #888;
 }

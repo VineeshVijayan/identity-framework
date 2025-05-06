@@ -50,7 +50,7 @@ function ManageExistingRoleComponent() {
                     </div>
 
                     <div className="card p-3 mb-3 shadow-sm">
-                        <h4>New Role</h4>
+                        <h4>Role</h4>
                         <form role="search" className="d-flex align-items-center">
 
                             <input

@@ -18,3 +18,25 @@
 .search-btn {
     margin-left: 2%;
 }
+
+.page-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.page-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.page-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}

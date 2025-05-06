@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import IdentityIcon from "../Asset/Identity.png";
 function Sidebar() {
     const navigate = useNavigate(); // Import useNavigate
 
@@ -17,7 +17,12 @@ function Sidebar() {
     return (
         <div className="bg-white sidebar p-1">
             <div className="m-2">
-                <i className="bi bi-fingerprint me-2 fs-4"></i>
+                <img
+                    src={IdentityIcon}
+                    alt="Identity Icon"
+                    className="me-2"
+                    style={{ width: "24px", height: "28px" }}
+                />
                 <span className="brand-name fs-6 " onClick={() => navigate('/dashboard')}
                     style={{ cursor: "pointer" }}>Identity Framework</span>
             </div>

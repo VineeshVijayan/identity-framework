@@ -5,11 +5,11 @@ import './ManageOutboundConnectors.scss';
 
 function ManageOutboundConnectors() {
     return (
-        <div className="d-flex" margin="auto">
+        <div className="page-layout">
             <Sidebar />
-            <div className="flex-grow-1">
+            <div className="page-content">
                 <Navbar />
-                <div className='search-bar'>
+                <div className="search-bar">
 
                     <form role="search" className="d-flex align-items-center">
 

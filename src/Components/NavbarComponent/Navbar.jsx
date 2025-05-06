@@ -9,7 +9,20 @@ function Navbar() {
     return (
         <nav className="navbar navbar-expand-sm navbar-custom px-3">
             <div className='container-fluid'>
-                <i className="bi bi-list navbar-toggler-icon"></i>
+
+                <div class='navbar-icon'><i className="bi-justify fs-3"></i>
+                </div>
+
+
+
+
+                <div className="welcome d-flex align-items-center gap-2">
+                    <h5 className="mb-0">Welcome</h5>
+                    <div className="welcomeName">
+                        <h3 className="mb-0">Rico Brown</h3>
+                    </div>
+                </div>
+
 
                 <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
 

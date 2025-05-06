@@ -72,7 +72,11 @@ const LoginComponent = () => {
 
                 <Button type="submit" className="login-btn">Login</Button>
             </Form>
+            <div className="powered-by">
+                Powered by Identity Framework
+            </div>
         </div>
+
     );
 };
 
