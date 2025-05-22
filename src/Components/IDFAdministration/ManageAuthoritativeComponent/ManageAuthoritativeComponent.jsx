@@ -1,6 +1,6 @@
 import React from 'react';
-import Navbar from '../../NavbarComponent/Navbar'; // Adjust the path as needed
-import Sidebar from '../../SidebarComponents/Sidebar'; // Adjust the path as needed
+import Navbar from '../../NavbarComponent/Navbar';
+import Sidebar from '../../SidebarComponents/Sidebar';
 import './ManageAuthoritativeComponent.scss';
 
 function ManageAuthoritativeComponent() {

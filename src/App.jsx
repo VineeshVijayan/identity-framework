@@ -11,6 +11,7 @@ import ManageAuthoritativeComponent from './Components/IDFAdministration/ManageA
 import ManageOutboundConnectors from './Components/IDFAdministration/ManageOutboundConnectorsComponent/ManageOutboundConnectors';
 import UserAdministrationComponent from './Components/IDFAdministration/UserAdministrationComponent/UserAdministrationComponent';
 
+import IdfSettingComponent from './Components/IDFAdministration/IDFSettingComponent/IdfSettingComponent';
 import Login from './Components/LoginComponent/LoginComponent';
 import UserProfile from './Components/NavbarComponent/UserProfileComponent/UserProfile';
 import ManageExistingRoleComponent from './Components/RoleBasedAccessComponent/ManageExistingRoleComponent/ManageExistingRoleComponent';
@@ -54,6 +55,8 @@ function App() {
           <Route path="/manageauthoritative" element={<ManageAuthoritativeComponent />} />
           {/* IDF Administration.ManageOutBound */}
           <Route path="/manageoutbound" element={<ManageOutboundConnectors />} />
+          {/* IDF Administration.IdfSettingComponent */}
+          <Route path="/idfSetting" element={<IdfSettingComponent />} />
           {/* Navbar.UserProfile*/}
           <Route path="/userprofile" element={<UserProfile />} />
 

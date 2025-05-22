@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import IdentityIcon from "../Asset/Identity.png";
+import './Sidebar.scss';
 function Sidebar() {
-    const navigate = useNavigate(); // Import useNavigate
+    const navigate = useNavigate();
+    const [openMenus, setOpenMenus] = useState({});
 
-    const [openMenus, setOpenMenus] = useState({}); // Object to track open/close state
+    React.useEffect(() => {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    }, []);
 
-    // Toggle function for individual menus
+
+
     const toggleMenu = (menu) => {
         setOpenMenus((prev) => ({
             ...prev,
-            [menu]: !prev[menu], // Toggle only the selected menu
+            [menu]: !prev[menu],
         }));
     };
 
@@ -18,8 +26,8 @@ function Sidebar() {
         <div className="bg-white sidebar p-1">
             <div className="m-2">
                 <img
-                    src={IdentityIcon}
-                    alt="Identity Icon"
+                    src={localStorage.getItem("sidebarIcon") || IdentityIcon}
+                    alt="Sidebar Icon"
                     className="me-2"
                     style={{ width: "24px", height: "28px" }}
                 />
@@ -145,8 +153,9 @@ function Sidebar() {
                                 onClick={() => navigate('/manageoutbound')}
                                 style={{ cursor: "pointer" }}>Manage Outbound Connectors</a>
 
-
-                            <a className="list-group-item py-1 border-0" href="#">IDF Settings</a>
+                            <a className="list-group-item py-1 border-0"
+                                onClick={() => navigate('/idfSetting')}
+                                style={{ cursor: "pointer" }}> IDF Settings</a>
                         </div>
                     )}
                 </div>

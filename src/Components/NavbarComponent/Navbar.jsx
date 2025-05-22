@@ -5,7 +5,12 @@ import './Navbar.css';
 
 function Navbar() {
     const navigate = useNavigate(); // ✅ Initialize navigate
-
+    React.useEffect(() => {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    }, []);
     return (
         <nav className="navbar navbar-expand-sm navbar-custom px-3">
             <div className='container-fluid'>
@@ -28,6 +33,24 @@ function Navbar() {
 
                 <div className="collapse navbar-collapse" id="collapsibleNavId">
                     <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
+
+
+                        <li className="nav-item nav-item4">
+                            <button
+                                className="btn dark-toggle"
+                                onClick={() => {
+                                    const html = document.documentElement;
+                                    const isDark = html.classList.toggle('dark-mode');
+                                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                                }}
+                                title="Toggle Theme"
+                            >
+                                <i className="bi bi-moon"></i>
+                            </button>
+                        </li>
+
+
+
                         <li className="nav-item1">
                             <button className="btn btn-primary nav-btn1" onClick={() => navigate('/user')} title="Create New User">
                                 <i className='bi bi-person-plus-fill'></i>
@@ -76,6 +99,7 @@ function Navbar() {
                     </ul>
                 </div>
             </div>
+
         </nav>
     );
 }
