@@ -15,11 +15,8 @@
 
 .navbar-icon {
     margin-left: 3%;
-    /* Pushes the icon to the right */
     font-size: 1.1rem;
-    /* Adjust size if needed */
     cursor: pointer;
-    /* Makes it clickable */
 }
 
 .nav-btn1 {
@@ -75,7 +72,6 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    /* optional spacing */
 }
 
 .welcome h5,
@@ -83,7 +79,6 @@
     margin: 0;
     line-height: 1;
     font-size: 1.5rem;
-    /* make both equal */
 }
 
 .dark-mode {

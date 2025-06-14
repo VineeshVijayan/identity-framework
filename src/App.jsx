@@ -11,6 +11,7 @@ import ManageAuthoritativeComponent from './Components/IDFAdministration/ManageA
 import ManageOutboundConnectors from './Components/IDFAdministration/ManageOutboundConnectorsComponent/ManageOutboundConnectors';
 import UserAdministrationComponent from './Components/IDFAdministration/UserAdministrationComponent/UserAdministrationComponent';
 
+import ChangeSideBarIcon from './Components/IDFAdministration/ChangeSidebarIconComponent/ChangeSideBarIcon';
 import IdfSettingComponent from './Components/IDFAdministration/IDFSettingComponent/IdfSettingComponent';
 import Login from './Components/LoginComponent/LoginComponent';
 import UserProfile from './Components/NavbarComponent/UserProfileComponent/UserProfile';
@@ -59,6 +60,9 @@ function App() {
           <Route path="/idfSetting" element={<IdfSettingComponent />} />
           {/* Navbar.UserProfile*/}
           <Route path="/userprofile" element={<UserProfile />} />
+
+          {/* IDF Administration.IdfSettingComponent.ChangeIcon*/}
+          <Route path="/changeicon" element={<ChangeSideBarIcon />} />
 
 
         </Routes>

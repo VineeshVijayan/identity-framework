@@ -46,13 +46,11 @@
   flex-direction: column;
 }
 
-/* Base Light Mode (default) */
 body {
   background-color: #fff;
   color: #000;
 }
 
-/* Dark Mode */
 .dark-mode body {
   background-color: #121212;
   color: #fff;

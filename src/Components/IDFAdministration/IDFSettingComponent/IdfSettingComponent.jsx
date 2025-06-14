@@ -1,48 +1,84 @@
-import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import Navbar from '../../NavbarComponent/Navbar';
 import Sidebar from '../../SidebarComponents/Sidebar';
 import './IdfSettingComponent.scss';
 
 function IdfSettingComponent() {
-    const [tempIcon, setTempIcon] = useState(null);
-    const [iconPreview, setIconPreview] = useState(localStorage.getItem("sidebarIcon") || "");
-
-    const handleIconChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                setTempIcon(reader.result);
-            };
-            reader.readAsDataURL(file);
-        }
-    };
-
-    const handleSubmit = () => {
-        if (tempIcon) {
-            localStorage.setItem("sidebarIcon", tempIcon);
-            setIconPreview(tempIcon);
-            window.location.reload();
-        }
-    };
-
+    const navigate = useNavigate();
     return (
         <div className="page-layout">
             <Sidebar />
             <div className="page-content">
                 <Navbar />
-                <div className="mt-4 p-3">
-                    <h5>Change Sidebar Icon</h5>
-                    <input type="file" accept="image/*" onChange={handleIconChange} />
-                    {tempIcon && (
-                        <div className="mt-3">
-                            <p>Preview:</p>
-                            <img src={tempIcon} alt="Icon Preview" style={{ width: '40px', height: '40px' }} />
-                            <br />
-                            <button className="btn btn-primary mt-2" onClick={handleSubmit}>Submit</button>
-                        </div>
-                    )}
+                <div style={{ paddingLeft: "30px" }}>
+
+
+                    <ul className="option-list">
+
+                        <li>
+                            <a className="list-group-item py-1 border-0"
+                                onClick={() => navigate('/changeicon')}
+                                style={{ cursor: "pointer" }}>Change Sidebar Icon
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 1
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 2
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 3
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 4
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 5
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 6
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 7
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 8
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 9
+                            </a>
+                        </li>
+                        <li>
+                            <a className="list-group-item py-1 border-0" onClick={() => navigate('/**')} style={{ cursor: "pointer" }}>
+                                Option 10
+                            </a>
+                        </li>
+                    </ul>
+
+
+
                 </div>
+
             </div>
         </div>
     );

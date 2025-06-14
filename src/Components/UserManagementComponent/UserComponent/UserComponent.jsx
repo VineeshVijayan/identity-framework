@@ -5,7 +5,6 @@ import './UserComponent.scss';
 
 function UserComponent() {
 
-    // Inside your component:
     const [selectedImage, setSelectedImage] = useState(null);
 
     const handleImageChange = (event) => {
@@ -61,10 +60,8 @@ function UserComponent() {
                         </div>
                     </div>
 
-                    {/* Second Section: Permissions */}
                     <div className="card p-3 shadow-sm">
                         <h4>Assign Role</h4>
-                        {/* Search Form */}
                         <form role="search" className="d-flex align-items-center">
 
                             <input
@@ -77,7 +74,6 @@ function UserComponent() {
                             <div className='search-btn'><button className="btn btn-outline-success me-3" type="submit">Search</button></div>
 
                         </form>
-                        {/* Submit Button */}
                         <div className="button-container mt-3">
                             <button type="button" className="btn btn-success">Submit</button>
                         </div>

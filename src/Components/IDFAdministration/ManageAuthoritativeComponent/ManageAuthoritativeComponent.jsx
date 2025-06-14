@@ -29,10 +29,8 @@ function ManageAuthoritativeComponent() {
                 <div className="container mt-4">
 
 
-                    {/* Second Section: Permissions */}
                     <div className="card p-3 shadow-sm">
                         <h4>Connectors</h4>
-                        {/* Search Form */}
                         <form role="search" className="d-flex align-items-center">
 
                             <input
@@ -46,7 +44,6 @@ function ManageAuthoritativeComponent() {
 
                         </form>
 
-                        {/* Large Text Area */}
                         <textarea className="form-control mt-3" rows="15" placeholder="Enter details here..."></textarea>
 
 

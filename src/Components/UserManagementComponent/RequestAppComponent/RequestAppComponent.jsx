@@ -56,10 +56,8 @@ function RequestAppComponent() {
                         </div>
                     </div>
 
-                    {/* Second Section: Permissions */}
                     <div className="card p-3 shadow-sm">
                         <h4>Application(s) being requested</h4>
-                        {/* Search Form */}
                         <form role="search" className="d-flex align-items-center">
 
                             <input

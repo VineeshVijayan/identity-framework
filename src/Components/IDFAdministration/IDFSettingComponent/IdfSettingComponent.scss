@@ -1,0 +1,13 @@
+.option-list {
+    list-style-type: disc;
+    padding-left: 20px;
+
+    li {
+        margin-bottom: 8px;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+}
