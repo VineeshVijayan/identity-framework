@@ -4,7 +4,8 @@ import Sidebar from '../../SidebarComponents/Sidebar';
 import './ChangeSideBarIcon.scss';
 function ChangeSideBarIcon() {
     const [tempIcon, setTempIcon] = useState(null);
-    const [setIconPreview] = useState(localStorage.getItem("sidebarIcon") || "");
+    const [iconPreview, setIconPreview] = useState(localStorage.getItem("sidebarIcon") || "");
+
     const handleIconChange = (e) => {
         const file = e.target.files[0];
         if (file) {
